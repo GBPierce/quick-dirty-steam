@@ -6,10 +6,10 @@ QuickDirtySteam is a collection of classes I created in an effort to learn more 
 
 ## Workflow:
 I tried to condense it down to as little functions as possible and ended up with a workflow roughly like this:
-0. Initialize the API using **SteamManager.Initialize()** and call **SteamManager.RunCallbacks()** once per iteration
-1. Inherit the **Server Class** and hook into its event as seen fit
-2. Call **Lobby.Create()** on the host's end, set some lobby meta data by calling **Lobby.SetMetaDataPair()** and make the lobby public by calling **Lobby.Open()**
-4. Call **Lobby.Enter()** on the cient's End
+1. Initialize the API using **SteamManager.Initialize()** and call **SteamManager.RunCallbacks()** once per iteration
+2. Inherit the **Server Class** and hook into its event as seen fit
+3. Call **Lobby.Create()** on the host's end, set some lobby meta data by calling **Lobby.SetMetaDataPair()** and make the lobby public by calling **Lobby.Open()**
+4. Call **Lobby.Enter()** on the client's End
 5. Call **Server.Start()** and **Lobby.SetServerActive()** on the host's end
 6. Have both the client and the host connect to the server by calling **Client.Connect()**
 7. Data packets can now be exchanged by **Calling Client.SendMessage()**
